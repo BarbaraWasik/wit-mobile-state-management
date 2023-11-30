@@ -32,7 +32,9 @@ class MyHomePage extends StatelessWidget {
       child: BlocBuilder<BackgroundCubit, BackgroundState>(
         builder: (context, state) {
           return Scaffold(
-            backgroundColor: state.colorValue,
+            // TODO: Zastąp Colors.grey wartością koloru, który otrzymasz po kliknięciu na przycisk
+            // TODO "Change background color" lub reset. Tip: skorzystaj z właściwości state
+            backgroundColor: Colors.grey,
             appBar: AppBar(
               backgroundColor: Theme.of(context).colorScheme.inversePrimary,
               title: Text(title),
@@ -45,12 +47,18 @@ class MyHomePage extends StatelessWidget {
                     'Your background',
                   ),
                   ElevatedButton(
-                      onPressed: () => context.read<BackgroundCubit>().changeBackgroundColor(), child: const Text('Change background color'))
+                      onPressed: () => {
+                            // TODO: Skorzystaj z context.read<TwójCubit> i wywołaj metodę która w rezultacie
+                            // TODO: zwraca losowy kolor
+                          },
+                      child: const Text('Change background color'))
                 ],
               ),
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () => context.read<BackgroundCubit>().restToInitialBackground(),
+              onPressed: () => {
+                // TODO: Tak jak powyżej, tym razem zwracamy domyślny kolor
+              },
               child: const Text('Reset'),
             ),
           );

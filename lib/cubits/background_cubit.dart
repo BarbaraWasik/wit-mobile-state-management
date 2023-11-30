@@ -6,13 +6,15 @@ import 'package:wit_cubit_example_1/utils/random_color.dart';
 part 'background_state.dart';
 
 class BackgroundCubit extends Cubit<BackgroundState> {
-  BackgroundCubit() : super(const BackgroundInitial());
+  // BackgroundCubit() : super(const BackgroundInitial());
 
   void changeBackgroundColor() {
     var newRandomColor = Utils.getRandomColor();
 
-    emit(BackgroundChange(newRandomColor));
+    // TODO: Wyemituj stan zmiany tła i podaj newRandomColor jako nowy kolor
   }
 
-  void restToInitialBackground() => emit(const BackgroundInitial());
+  void restToInitialBackground() {
+    // TODO: Wyemituj stan początkowy
+  }
 }

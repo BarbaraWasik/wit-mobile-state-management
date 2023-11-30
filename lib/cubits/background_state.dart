@@ -9,10 +9,6 @@ abstract class BackgroundState extends Equatable {
   List<Object?> get props => [colorValue];
 }
 
-class BackgroundInitial extends BackgroundState {
-  const BackgroundInitial() : super(Colors.white);
-}
-
-class BackgroundChange extends BackgroundState {
-  const BackgroundChange(Color colorValue) : super(colorValue);
-}
+// TODO:
+// 1. Stwórz BackgroundInitial, który przyjmuje Colors.white jako wartość domyślną/początkową
+// 2. Stwórz BackgroundChange, stan zmiany koloru tła, który zależy od colorValue
