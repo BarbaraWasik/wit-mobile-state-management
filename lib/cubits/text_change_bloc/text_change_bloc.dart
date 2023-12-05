@@ -10,11 +10,14 @@ class ChangeTextBloc extends Bloc<ChangeTextEvent, ChangeTextState> {
 
   ChangeTextBloc() : super(ChangeTextInitial()) {
     on<SuccessChangeTextEvent>((event, emit) => _handleSuccessTransformText(event, emit), transformer: BlocUtils.debounce(debounceDuration));
-    on<ResetChangeTextEvent>((_, emit) => emit(ChangeTextInitial()));
+
+    //TODO: Na ResetChangeTextEvent emituj ChangeTextInitial()
   }
 
   Future<void> _handleSuccessTransformText(SuccessChangeTextEvent event, Emitter<ChangeTextState> emit) async {
-    emit(ChangeTextLoading());
-    emit(ChangeTextSuccess(event.transformedText.toUpperCase()));
+    //TODO:
+    // 1. Emituj ChangeTextLoading()
+    // 2. Emituj ChangeTextSuccess ktory przyjmuje transformedText - skorzystaj z event. Tekst ma się w wielkie liter za pomocą toUpperCase()
+
   }
 }

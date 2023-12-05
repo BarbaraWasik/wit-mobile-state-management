@@ -9,12 +9,12 @@ abstract class ChangeTextState extends Equatable {
 
 class ChangeTextInitial extends ChangeTextState {}
 
-class ChangeTextLoading extends ChangeTextState {}
+//TODO:
+// 1. Stwórz state ChangeTextLoading - na wzór ChangeTextInitial
 
 class ChangeTextSuccess extends ChangeTextState {
-  final String transformedText;
-
-  const ChangeTextSuccess(this.transformedText);
+  //TODO:
+  // 2. Dodaj zmienną transformedText typu String i zanicjalizuj ją
 
   @override
   List<Object> get props => [transformedText];

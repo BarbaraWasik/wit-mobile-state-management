@@ -24,8 +24,14 @@ class ColumnWidget extends StatelessWidget {
             } else if (state is ChangeTextSuccess) {
               return Column(
                 children: [
-                  Center(child: Text(state.transformedText, style: const TextStyle(fontSize: 20))),
-                  ElevatedButton(onPressed: () => context.read<ChangeTextBloc>().add(ResetChangeTextEvent()), child: const Text("Reset"))
+                  Center(
+                    // TODO: w miejscu 'Transformed text' wyświetl wpisany tekst. Tip: użyj state
+                    child: Text('Transformed text', style: const TextStyle(fontSize: 20)),
+                  ),
+                  ElevatedButton(
+                      // TODO: Na przycisku wywołaj ResetChangeTextEvent()
+                      onPressed: () => {},
+                      child: const Text("Reset"))
                 ],
               );
             } else {
